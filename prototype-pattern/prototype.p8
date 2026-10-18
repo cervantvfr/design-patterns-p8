@@ -21,6 +21,11 @@ function _init()
 end
 
 function _update()
+	for e in all(enemies) do
+		if e.alive then
+			e.x+=e.spd
+		end
+	end
 end
 
 function _draw()
@@ -67,6 +72,7 @@ proto_rock_slime.spr=3
 proto_rock_slime.maxhp=8
 proto_rock_slime.spd=0.25
 proto_rock_slime.dmg=2
+proto_rock_slime.dmg_type="normal"
 proto_rock_slime.armored=true
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
